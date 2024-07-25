@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1535102837 source:f:\1\code blocks\sample combination\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1535102837 source:f:\job\code blocks\sample combination\main.c
+	<stdio.h>
+	<stdlib.h>
+
