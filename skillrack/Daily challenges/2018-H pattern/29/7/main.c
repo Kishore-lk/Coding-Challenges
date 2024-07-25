@@ -1,0 +1,97 @@
+#include<stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    char a[100],b[100],c[100],first[100],second,s[100][100];
+    scanf("%s %s %s",a,b,c);
+    int l=strlen(a),i,j,k;
+    for(i=0;i<l;i++)
+    {
+        if(a[i]<b[i]&&a[i]<c[i])
+        {
+            while(a[i]!='\0')
+            {
+                s[i][0]=a[i];
+                if(a[i]==b[0])
+                {
+                k=i;
+                for(j=0;j<l;j++)
+                    s[i][j]=b[j];
+                    for(j=0;j<l;j++)
+                        s[j][l-1]=c[j];
+                }
+                if(a[i]==c[0])
+                {
+                k=i;
+                for(j=0;j<l;j++)
+                    s[i][j]=c[j];
+                    for(j=0;j<l;j++)
+                        s[j][l-1]=b[j];
+                }
+                i++;
+            }
+        }
+        if(b[i]<a[i]&&b[i]<c[i])
+        {
+            while(b[i]!='\0')
+            {
+                s[i][0]=b[i];
+                if(b[i]==a[0])
+                {
+                    k=i;
+                    for(j=0;j<l;j++)
+                        s[i][j]=a[j];
+                    for(j=0;j<l;j++)
+                        s[j][l-1]=c[j];
+                }
+                if(b[i]==c[0])
+                {
+                    k=i;
+                    for(j=0;j<l;j++)
+                        s[i][j]=c[j];
+                    for(j=0;j<l;j++)
+                        s[j][l-1]=a[j];
+                }
+                i++;
+            }
+        }
+        else
+        {
+            while(c[i]!='\0')
+            {
+                s[i][0]=c[i];
+                if(c[i]==b[0])
+                {
+                    k=i;
+                    for(j=0;j<l;j++)
+                        s[i][j]=b[j];
+                    for(j=0;j<l;j++)
+                        s[j][l-1]=a[j];
+                }
+                if(c[i]==a[0])
+                {
+                    k=i;
+                    for(j=0;j<l;j++)
+                        s[i][j]=a[j];
+                    for(j=0;j<l;j++)
+                        s[j][l-1]=b[j];
+                }
+                i++;
+            }
+        }
+    }
+   for(i=0;i<l;i++)
+   {
+       for(j=0;j<l;j++)
+       {
+           if(s[i][j]=='\0')
+           printf("+");
+           else
+           printf("%c",s[i][j]);
+
+       }
+       printf("\n");
+   }
+
+}

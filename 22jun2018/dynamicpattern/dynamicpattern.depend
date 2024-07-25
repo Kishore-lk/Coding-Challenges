@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1529650201 source:f:\1\zoho\22jun2018\dynamicpattern\main.c
+	<stdio.h>
+	<stdlib.h>
+
